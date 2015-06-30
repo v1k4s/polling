@@ -1,0 +1,22 @@
+{{> header}}
+<div class="jumbotron">
+        <h3>Dashboard</h3>
+        <p>Welcome to your dashboard, {{firstName}}{{#if admin}}(Admin){{/if}}</p>
+        {{#if admin}}
+        <ol>
+                <li><a href="http://127.0.0.1:8080/poll/all">View All Polls</a></li><br>
+                <li><a href="http://127.0.0.1:8080/poll/new">Create New Poll</a></li><br>
+                <li><a href="http://127.0.0.1:8080/user/profile">My Profile</a></li><br>
+                <li><a href="http://127.0.0.1:8080/logout">Log me Out</a></li>
+
+        </ol>
+        {{else}}
+        <ol>
+                <li><a href="http://127.0.0.1:8080/poll/all">View available Polls</a></li><br>
+                <li><a href="http://127.0.0.1:8080/user/profile">My Profile</a></li><br>
+                <li><a href="http://127.0.0.1:8080/logout">Log me Out</a></li>
+
+        </ol>
+        {{/if}}
+</div>
+{{> footer}}

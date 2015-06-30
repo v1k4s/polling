@@ -1,0 +1,15 @@
+{{> header}}
+{{#each pollMap}}
+<div class="row">
+    <div class = "col-md-2"></div>
+    <div class = "col-md-8 panel panel-success">
+        <div class="panel-heading">Poll</div>
+        <div class="panel-body">Topic:&nbsp;&nbsp;{{title}}
+        <a href="http://127.0.0.1:8080/poll/view?id={{id}}" role="button" class="btn btn-success btn-small" align="right">View Poll</a></div>
+        <br>
+    </div>
+    <div class = "col-md-2"></div>
+</div>
+{{/each}}
+
+{{>footer}}

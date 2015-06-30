@@ -1,0 +1,27 @@
+{{> header}}
+{{#if message}}
+<div class="alert alert-info" align="center">
+    <strong>Message:</strong> {{message}}
+</div>
+{{/if}}
+<div class="row">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-8">
+            <form action="/poll/vote" method="post">
+            <h4>{{title}}</h4><br>
+            <p> {{desc}}</p>
+            <ul class="options_list">
+                {{#each options}}
+
+                <li><label><input type="radio" name="option" value = "{{name}}">&nbsp;{{name}}</label>{{#if ../viewVotes}}<p>&nbsp;&nbsp;Votes:&nbsp;{{votes}}</p>{{/if}}</li>
+
+                {{/each}}
+            </ul>
+                <input name="id" hidden="" value="{{id}}">
+                <input type="submit" value="Vote For It!!">
+            </form>
+
+        </div>
+        <div class = "col-md-2"></div>
+</div>
+{{> footer}}

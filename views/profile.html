@@ -1,0 +1,22 @@
+{{> header}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row" align="center">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <h3>My Profile</h3>
+        <form method="post" action="/user/update">
+            <label for="firstName" align="left">First Name:   </label>   <input type="text" id="firstName" class="form-control" name="firstName" value={{firstName}}><br><br>
+            <label for="lastname">Last name:      </label>  <input type="text" name="lastName" class="form-control" value={{lastName}}><br><br>
+            <label for="email">Email Address:    </label>   <input type="email" name="email" class="form-control" value={{email}} disabled><br><br>
+            <label for="username">Username:       </label>  <input type="text" name="username" class="form-control" value={{username}} disabled><br><br>
+            <input type="submit" class="btn btn-success" value="Update" align="center">
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{{> footer}}

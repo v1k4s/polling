@@ -1,0 +1,27 @@
+
+<div id="top-nav" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-toggle"></span>
+        </button>
+        <a class="navbar-brand" href="http://127.0.0.1:8080/">Online Polling Application</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+            {{#if firstName}}
+            <li class="dropdown">
+                <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                    <strong>{{firstName}}</strong> <span class="caret"></span></a>
+                <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                    <li><a href="http://127.0.0.1:8080/user/profile">My Profile</a></li>
+                    <li><a href="http://127.0.0.1:8080/user/dashboard">Dashboard</a></li>
+                </ul>
+            </li>
+            <li><a href="http://127.0.0.1:8080/logout">Log out</a></li>
+            {{else}}
+            <li><a href="http://127.0.0.1:8080/register">Register</a></li>
+            <li><a href="http://127.0.0.1:8080/login">Log In</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+{{> header}}
+
+<script>
+    function forgot(){
+        $("p").hide();
+        $("form").attr({
+            "action" : "/user/forgot"
+        })
+        $("input#forgotPassword").hide();
+        $("input#submitButton").attr(
+                {
+                    "value": "Send verification Link"
+                }
+        )
+
+    }
+    //<a href="http://127.0.0.1:8080/user/forgot" class="btn btn-danger" role="button">Forgot Password</a>
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row" align="center">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        {{#if message}}
+        <div class="alert alert-info" align="center">
+            {{message}}
+        </div>
+        {{/if}}
+        <form method="post" action="">
+        <label>Username: </label><input id = "login" type="text" name="username"><br><br>
+        <p id="password"><label>Password: </label><input id="password" type="password" name="password"><br><br></p>
+            <p> <input id="remember" type="checkbox" name="remember" value="true">        Remember me</p>
+            <input id = "submitButton" type="submit" value="Login" class="btn btn-info" align="center">
+            <input id = "forgotPassword" type="button" value="Forgot Password" class="btn btn-info" align="center" onclick="forgot()">
+
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+{{> footer}}

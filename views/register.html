@@ -1,0 +1,29 @@
+{{> header}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row" align="center">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        {{#if message}}
+        <div class="alert alert-info" align="center">
+            {{message}}
+        </div>
+        {{/if}}
+        <form method="post" action="">
+            <label for="firstName" align="left">First Name:   </label>   <input type="text" name="firstName" placeholder="First Name"><br><br>
+            <label for="lastname">Last name:      </label>  <input type="text" name="lastName" placeholder="Last Name"><br><br>
+            <label for="email">Email Address:    </label>   <input type="email" name="email" placeholder="abc@example.com"><br><br>
+            <label for="username">Username:       </label>  <input type="text" name="username" placeholder="Username"><br><br>
+            <label for="password">Password:      </label>   <input type="password" name="password"><br><br>
+            <label for="password">Confirm password: </label><input type="password" name="confirmpassword"><br><br>
+            <input type="button" class="btn btn-danger" value="Reset" align="center">
+            <input type="submit" class="btn btn-success" value="Register" align="center">
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{{> footer}}
